@@ -13,8 +13,22 @@ function App(){
 
   return(
 
-    
-  )
+    <Router>
+      <div>
+        <NavBar />
+        <Switch>
+          <Route path="/movies">
+            <MoviesPage movies={movies} />
+          </Route>
+          <Route exact path="/">
+            <div>Home</div>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
+
+  export default App;
 
 }
 
